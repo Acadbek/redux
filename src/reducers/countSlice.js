@@ -7,8 +7,14 @@ export const countSlice = createSlice({
     plus: (state) => {
       state.count += 1;
     },
+    minus: (state) => {
+      state.count -= 1;
+    },
+    reset: (state) => {
+      state.count = 0;
+    },
   },
 });
 
-export const { plus } = countSlice.actions;
+export const { plus, minus, reset } = countSlice.actions;
 export default countSlice.reducer;

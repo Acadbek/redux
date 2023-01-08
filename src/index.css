@@ -5,3 +5,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 25px;
 }
+
+button {
+  cursor: pointer;
+}

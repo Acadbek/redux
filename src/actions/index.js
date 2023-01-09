@@ -8,3 +8,9 @@ export const decrement = () => {
         type: 'DECREMENT'
     }
 }
+
+export const sign_in = () => {
+    return {
+        type: 'SIGN_IN'
+    }
+}

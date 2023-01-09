@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux'
-import {increment, decrement} from "../actions";
+import {increment, decrement, sign_in} from "../actions";
 import {useDispatch} from 'react-redux'
 
 const Fleet = () => {
@@ -11,6 +11,7 @@ const Fleet = () => {
             <h1>Hello in Fleet file {count}</h1>
             <button onClick={() => dispatch(increment())}>+</button>
             <button onClick={() => dispatch(decrement())}>-</button>
+            <button onClick={() => dispatch(sign_in())}>sign in</button>
             {isLogged ? <h3>heeeeeeeeeeeey</h3> : ''}
         </div>
     )

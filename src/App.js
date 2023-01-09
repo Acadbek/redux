@@ -1,14 +1,10 @@
-import { useSelector } from "react-redux";
-import { Plus, Minus, Reset } from "./components";
+import Fleet from "./components/fleet";
 
-function App() {
-  const store = useSelector((state) => state.count);
-  return (
-    <div className="App">
-      <Plus /> {store} <Minus />
-      <Reset />
-    </div>
-  );
+
+const App = () => {
+    return (
+        <Fleet/>
+    )
 }
 
-export default App;
+export default App

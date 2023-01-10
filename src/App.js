@@ -1,9 +1,13 @@
 import Fleet from "./components/fleet";
+import Profile from './components/Profile'
+import Login from './components/Login'
 
 
 const App = () => {
     return (
-        <Fleet/>
+        <div>
+            <Profile/>
+        </div>
     )
 }
 

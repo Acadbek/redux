@@ -15,3 +15,15 @@ export const sign_in = () => {
         type: 'SIGN_IN'
     }
 }
+
+export const deleteItem = () => {
+    return {
+        type: 'DELETE'
+    }
+}
+export const add = (vl) => {
+    return {
+        type: 'ADD',
+        payload: vl
+    }
+}

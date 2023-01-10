@@ -9,7 +9,7 @@ const Fleet = () => {
     return (
         <div>
             <h1>Hello in Fleet file {count}</h1>
-            <button onClick={() => dispatch(increment())}>+</button>
+            <button onClick={() => dispatch(increment(5))}>+</button>
             <button onClick={() => dispatch(decrement())}>-</button>
             <button onClick={() => dispatch(sign_in())}>sign in</button>
             {isLogged ? <h3>heeeeeeeeeeeey</h3> : ''}

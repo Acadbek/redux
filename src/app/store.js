@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counter from "./slicer/counter";
+import counterSlicer from "../features/counter/counterSlicer";
 
 export const store = configureStore({
   reducer: {
-    student: counter,
+    counter: counterSlicer,
   },
 });

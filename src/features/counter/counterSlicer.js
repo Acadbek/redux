@@ -1,17 +1,33 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const fetchUsers = createAsyncThunk('')
+export const fetchUsers = createAsyncThunk("getUsers", async (payload) => {
+  return fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
+    res.json()
+  );
+});
 
 const counterSlice = createSlice({
   name: "counter",
-  initialState: { value: 0 },
+  initialState: { data: [], status: "", value: 0 },
   reducers: {
-    plusByAmount: (state, action) => {
-      state.value += action.payload;
+    plusByAmount: (state, { payload }) => {
+      state.value += payload;
     },
-    minusByAmount: (state, action) => {
-      state.value -= action.payload;
+    minusByAmount: (state, { payload }) => {
+      state.value -= payload;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchUsers.pending, (state) => {
+      state.status = "pending";
+    });
+    builder.addCase(fetchUsers.fulfilled, (state, action) => {
+      state.status = "success";
+      state.data = action.payload;
+    });
+    builder.addCase(fetchUsers.rejected, (state) => {
+      state.status = "failed";
+    });
   },
 });
 
